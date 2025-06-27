@@ -1,0 +1,20 @@
+{
+  "name": "oracle-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.oracle.OracleConnector",
+    "tasks.max": "1",
+    "database.server.name": "oracle",
+    "database.hostname": "oracle",
+    "database.port": "1521",
+    "database.user": "debezium",
+    "database.password": "dbz",
+    "database.dbname": "XEPDB1",
+    "database.pdb.name": "XEPDB1",
+    "database.out.server.name": "dbz_out",
+    "database.connection.adapter": "logminer",
+    "table.include.list": "DEBEZIUM.CUSTOMERS",
+    "topic.prefix": "dbz",
+    "database.history.kafka.bootstrap.servers": "kafka:29092",
+    "database.history.kafka.topic": "schema-changes.inventory"
+  }
+}
